@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, FunctionComponent, PropsWithChildren } from 'react';
 import { useHistory } from 'react-router-dom';
 import clsx from 'clsx';
 import { Theme, useTheme } from '@mui/material/styles';
@@ -79,7 +79,7 @@ const SIDE_BAR_PRIVATE_ITEMS: Array<LinkToPage> = [
 /**
  * Renders "Private Layout" composition
  */
-const PrivateLayout: React.FC = ({ children }) => {
+const PrivateLayout: FunctionComponent<PropsWithChildren<unknown>> = ({ children }) => {
   const [state] = useAppStore();
   const [openSideBar, setOpenSideBar] = useState(false);
   const theme = useTheme();

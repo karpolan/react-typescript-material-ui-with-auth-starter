@@ -7,6 +7,7 @@ import makeStyles from '@mui/styles/makeStyles';
 import AppIcon from '../AppIcon';
 import SideBarLink from './SideBarLink';
 import { LinkToPage } from '../../utils/type';
+import { FunctionComponent } from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
@@ -48,7 +49,7 @@ interface Props {
   showIcons?: boolean;
   afterLinkClick?: React.MouseEventHandler;
 }
-const SideBarNavigation: React.FC<Props> = ({
+const SideBarNavigation: FunctionComponent<Props> = ({
   className,
   items,
   showIcons = false,

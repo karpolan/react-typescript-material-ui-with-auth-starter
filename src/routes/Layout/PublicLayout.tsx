@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { FunctionComponent, PropsWithChildren, useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Theme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
@@ -61,7 +61,7 @@ const SIDE_BAR_PUBLIC_ITEMS: Array<LinkToPage> = [
 /**
  * Renders "Public Layout" composition
  */
-const PublicLayout: React.FC = ({ children }) => {
+const PublicLayout: FunctionComponent<PropsWithChildren<unknown>> = ({ children }) => {
   const classes = useStyles();
   const [openSideBar, setOpenSideBar] = useState(false);
   const [state, dispatch] = useAppStore();

@@ -1,4 +1,4 @@
-import { ReactNode, useCallback } from 'react';
+import { FunctionComponent, ReactNode, useCallback } from 'react';
 import { Dialog, DialogActions, DialogContent, DialogProps } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import createStyles from '@mui/styles/createStyles';
@@ -29,7 +29,7 @@ interface Props extends DialogProps {
   onConfirm?: (data: unknown) => void;
   onClose?: (event: {}) => void;
 }
-const CommonDialog: React.FC<Props> = ({
+const CommonDialog: FunctionComponent<Props> = ({
   open = false, // Don't show dialog by default
   data, // optional data passed to onConfirm callback
   title = 'Missing title...',

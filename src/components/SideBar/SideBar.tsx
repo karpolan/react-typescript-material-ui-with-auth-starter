@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { FunctionComponent, useCallback } from 'react';
 import clsx from 'clsx';
 import Divider from '@mui/material/Divider';
 import Drawer, { DrawerProps } from '@mui/material/Drawer';
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 interface Props extends Pick<DrawerProps, 'anchor' | 'className' | 'open' | 'variant' | 'onClose'> {
   items: Array<LinkToPage>;
 }
-const SideBar: React.FC<Props> = ({ anchor, className, open, variant, items, onClose, ...restOfProps }) => {
+const SideBar: FunctionComponent<Props> = ({ anchor, className, open, variant, items, onClose, ...restOfProps }) => {
   const [state, dispatch] = useAppStore();
   const classes = useStyles();
 

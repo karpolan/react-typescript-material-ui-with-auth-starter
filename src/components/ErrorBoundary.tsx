@@ -2,6 +2,7 @@ import React, { Component, ErrorInfo } from 'react';
 
 interface Props {
   name: string;
+  children: React.ReactNode;
 }
 
 interface State {

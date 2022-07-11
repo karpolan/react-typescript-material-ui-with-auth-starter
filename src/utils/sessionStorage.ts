@@ -1,8 +1,8 @@
 /**
- * Smartly reads value from localStorage
+ * Smartly reads value from sessionStorage
  */
-export function localStorageGet(name: string, defaultValue = ''): string {
-  const valueFromStore = localStorage.getItem(name);
+export function sessionStorageGet(name: string, defaultValue = ''): string {
+  const valueFromStore = sessionStorage.getItem(name);
   if (valueFromStore === null) return defaultValue; // No value in store, return default one
 
   try {
@@ -16,9 +16,9 @@ export function localStorageGet(name: string, defaultValue = ''): string {
 }
 
 /**
- * Smartly writes value into localStorage
+ * Smartly writes value into sessionStorage
  */
-export function localStorageSet(name: string, value: any) {
+export function sessionStorageSet(name: string, value: any) {
   if (typeof value === 'undefined') {
     return; // Do not store undefined values
   }
@@ -29,16 +29,16 @@ export function localStorageSet(name: string, value: any) {
     valueAsString = String(value);
   }
 
-  localStorage.setItem(name, valueAsString);
+  sessionStorage.setItem(name, valueAsString);
 }
 
 /**
- * Deletes value by name from localStorage, if specified name is empty entire localStorage is cleared.
+ * Deletes value by name from sessionStorage, if specified name is empty entire sessionStorage is cleared.
  */
-export function localStorageDelete(name: string) {
+export function sessionStorageDelete(name: string) {
   if (name) {
-    localStorage.removeItem(name);
+    sessionStorage.removeItem(name);
   } else {
-    localStorage.clear();
+    sessionStorage.clear();
   }
 }

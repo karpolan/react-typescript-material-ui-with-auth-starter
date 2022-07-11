@@ -1,6 +1,6 @@
 {
   "name": "react-typescript-material",
-  "version": "1.2.7",
+  "version": "1.3.9",
   "description": "React + Material UI + Auth starter using TypeScript",
   "author": {
     "name": "Anton Karpenko",
@@ -27,7 +27,7 @@
     "date-fns": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-router-dom": "latest",
+    "react-router-dom": "^5.3.3",
     "react-scripts": "latest",
     "typescript": "latest",
     "validate.js": "latest",
@@ -46,7 +46,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "yarn -s && react-scripts start",
+    "dev": "npm i && react-scripts start",
     "build": "react-scripts build",
     "type": "tsc",
     "format": "node_modules/.bin/prettier src --write",

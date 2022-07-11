@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { Theme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import MuiAlert, { AlertProps as MuiAlertProps } from '@mui/material/Alert';
+import { FunctionComponent } from 'react';
 
 /**
  * Note: You can change these const to control default appearance of the AppAlert component
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 /**
  * Application styled Alert component
  */
-const AppAlert: React.FC<MuiAlertProps> = ({
+const AppAlert: FunctionComponent<MuiAlertProps> = ({
   severity = APP_ALERT_SEVERITY,
   variant = APP_ALERT_VARIANT,
   elevation = APP_ALERT_ELEVATION,

@@ -1,3 +1,4 @@
+import { FunctionComponent } from 'react';
 import clsx from 'clsx';
 import { Theme, AppBar, Toolbar, Typography } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
@@ -36,7 +37,7 @@ interface Props {
   onMenu?: () => void;
   onNotifications?: () => void;
 }
-const TopBar: React.FC<Props> = ({
+const TopBar: FunctionComponent<Props> = ({
   className,
   title = '',
   isAuthenticated,

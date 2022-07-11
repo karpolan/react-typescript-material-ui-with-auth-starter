@@ -94,7 +94,7 @@ export function useAppForm({ validationSchema, initialValues = {} }: UseAppFormP
   }, [validationSchema, formState.values]);
 
   // Event to call on every Input change. Note: the "name" props of the Input control must be set!
-  const onFieldChange = useCallback((event) => {
+  const onFieldChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target?.name;
     const value =
       event.target?.type === 'checkbox'

@@ -19,7 +19,7 @@ const DialogsSection = () => {
     setModal(null);
   }, []);
 
-  const onMessageDialogConfirm = useCallback((data) => {
+  const onMessageDialogConfirm = useCallback((data: unknown) => {
     console.info('onMessageDialogConfirm() - data:', data);
     setModal(null);
   }, []);
@@ -42,7 +42,7 @@ const DialogsSection = () => {
     );
   };
 
-  const onConfirmDialogConfirm = useCallback((data) => {
+  const onConfirmDialogConfirm = useCallback((data: unknown) => {
     console.info('onConfirmDialogConfirm() - data:', data);
     setModal(null);
   }, []);
@@ -86,7 +86,7 @@ const DialogsSection = () => {
     );
   };
 
-  const onEditEmailDialogClose = useCallback((data) => {
+  const onEditEmailDialogClose = useCallback(() => {
     setOpenEmailDialog(false);
   }, []);
 

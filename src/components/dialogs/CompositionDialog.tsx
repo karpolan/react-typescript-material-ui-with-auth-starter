@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import { Box, Dialog, DialogActions, DialogContent, DialogProps } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import createStyles from '@mui/styles/createStyles';
@@ -20,7 +20,7 @@ interface Props extends DialogProps {
   actions?: ReactNode;
   onClose?: (event: {}) => void;
 }
-const CompositionDialog: React.FC<Props> = ({
+const CompositionDialog: FunctionComponent<Props> = ({
   actions,
   open = false, // Don't show dialog by default
   children = null,

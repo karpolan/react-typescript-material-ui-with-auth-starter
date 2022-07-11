@@ -1,4 +1,4 @@
-import { AppStore } from './store';
+import { AppStoreProvider } from './store';
 import { AppRouter, Routes } from './routes';
 import { ErrorBoundary } from './components';
 import { AppThemeProvider } from './theme';
@@ -10,13 +10,13 @@ import { AppThemeProvider } from './theme';
 const App = () => {
   return (
     <ErrorBoundary name="App">
-      <AppStore>
+      <AppStoreProvider>
         <AppThemeProvider>
           <AppRouter>
             <Routes />
           </AppRouter>
         </AppThemeProvider>
-      </AppStore>
+      </AppStoreProvider>
     </ErrorBoundary>
   );
 };

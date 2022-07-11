@@ -4,6 +4,7 @@ import makeStyles from '@mui/styles/makeStyles';
 import Box from '@mui/material/Box';
 import Button, { ButtonProps } from '@mui/material/Button';
 import { buttonStylesByNames, ColorName } from '../../utils/style';
+import { FunctionComponent } from 'react';
 
 /**
  * Note: You can change these const to control default appearance of the AppButton component
@@ -44,7 +45,7 @@ interface Props extends Omit<ButtonProps, 'color'> {
  * @param {string} [label] - text to render, alternate to .text
  * @param {string} [text] - text to render, alternate to .label
  */
-const AppButton: React.FC<Props> = ({
+const AppButton: FunctionComponent<Props> = ({
   children,
   className,
   color = 'default',
